@@ -2,6 +2,7 @@ FROM timbru31/ruby-node:2.5 as builder
 
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
+ADD ./fineract-provider.war /usr/src/app/dist/
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 
